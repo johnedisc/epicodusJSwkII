@@ -11,8 +11,16 @@ window.onload = function() {
 		currentEl = document.querySelector(loc);
 //		currentEl.innerHTML += 'the food has been served';
 		currentEl.style.backgroundColor = 'yellow';
-		
-
+	}
+	
+	htmlEl.onmouseout = function(event) { 
+		console.log(event); 
+		loc = event.target.localName + '.' + event.target.className;
+		console.log(loc);
+		currentEl = document.querySelector(loc);
+//		currentEl.innerHTML += 'the food has been served';
+		currentEl.style.backgroundColor = '';
+	
 	}
 }
 
